@@ -1,11 +1,16 @@
 <?php
+
+
+
 namespace Core;
+
 
 class Route {
     static function Init(){
 
     }
     static function Boot(String $requestPath,$ctx){
+        
         //路由解析
         $seg=explode("/",$requestPath);
         if(!isset($seg[1] )){
@@ -41,5 +46,6 @@ class Route {
         $action=$seg[3];
 
         $ctx->set("response", $instance->$action());
+       
     }
 }

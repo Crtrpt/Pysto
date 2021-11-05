@@ -1,14 +1,15 @@
 <?php
 
 namespace App\Base;
+use App\Utils\Uuid;
 
 class BaseController {
     
     public static function  success($data){
         return [
             "code"=>0,
-            "msg"=>"success",
-            "data"=>$data
+            "data"=>$data,
+            "tid"=>Uuid::tid()
         ];
     }
 
@@ -16,7 +17,7 @@ class BaseController {
         return [
             "code"=>1,
             "msg"=>"success",
-            "data"=>$data
+            "tid"=>Uuid::tid()
         ];
     }
 }
