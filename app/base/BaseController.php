@@ -1,22 +1,22 @@
 <?php
 
-namespace \App\Base\BaseController;
+namespace App\Base;
 
 class BaseController {
     
     public static function  success($data){
-        return json_encode([
+        return [
             "code"=>0,
             "msg"=>"success",
             "data"=>$data
-        ]);
+        ];
     }
 
     public static function error($msg){
-        return json_encode([
+        return [
             "code"=>1,
             "msg"=>"success",
             "data"=>$data
-        ]);
+        ];
     }
 }
