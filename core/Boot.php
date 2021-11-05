@@ -8,8 +8,7 @@ class Boot {
     static function Run(){
         $ctx=new Ctx();
         Boot::Init();
-        // var_dump(Config::get("app.name"));
-        // var_dump($_SERVER["REQUEST_URI"]);
+        //路由到相应的文件
         Route::Boot($_SERVER["REQUEST_URI"],$ctx);
         return  $ctx->get("response");
     }

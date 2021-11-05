@@ -10,7 +10,8 @@
         "psr-4": {
             "App\\": "app/",
             "Core\\": "core/",
-            "Plugin\\":"plugin/"
+            "Plugin\\":"plugin/",
+            "Service\\":"Service/"
         }
     },
     "require": {}
