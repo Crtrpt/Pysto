@@ -4,8 +4,8 @@ namespace Core;
 class Ctx {
     var $context=[];
     
-    static function Init(){
-    
+    function __construct(){
+        $this->context["ip"]=$_SERVER["REMOTE_ADDR"];
     }
     
     function set($k,$v){
@@ -15,5 +15,5 @@ class Ctx {
     function get($k){
         return $this->context[$k];
     }
-    
+
 }

@@ -1,10 +1,17 @@
 <?php
 namespace Core;
-
+use Core\Ctx;
 class Log {
     static $logFile;
-    static function Init(){
-        Log::$logFile=fopen("../log/access.log", "a+");
+    static $ctx;
+    static function Init($ctx){
+        Log::$ctx=$ctx;
+        $postfix=date("y-m-d",time());
+
+        Log::$logFile=fopen(Config::get("app.log_path","../log/app.log".$postfix), "a+");
+    }
+    static function Shutdown($ctx){
+        fclose(Log::$logFile);
     }
     static function debug($log){
         fwrite(Log::$logFile, Log::getLogStr().Log::serialization($log)."\r\n");
@@ -19,7 +26,7 @@ class Log {
         fwrite(Log::$logFile, Log::getLogStr().Log::serialization($log)."\r\n");
     }
     static function getLogStr(){
-        return "[".date("y-m-d h:i:s",time())."] ";
+        return  "[".Log::$ctx->get("ip")."] "."[".date("y-m-d h:i:s",time())."] ";
     }
     static function serialization($data){
         if(is_string($data)){
