@@ -5,21 +5,11 @@ namespace App\Test;
 use App\Base\BaseController;
 
 use Core\Event;
+use Core\Log;
 
 class TestController extends  BaseController {
     
     static public function  index(){
-        Event::on("test",function($payload){
-           
-        });
-
-        Event::fire("test","干什么?");
-
-        
-        Event::off("test");
-
-        Event::fire("test","干什么222222222111111111111");
-
         return self::success("test api");
     }
 
@@ -32,4 +22,9 @@ class TestController extends  BaseController {
 
         return self::success("test api");
     }
+    static public function  log(){
+        Log::info("11");
+        return self::success("test api");
+    }
+
 }

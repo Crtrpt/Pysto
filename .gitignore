@@ -3,3 +3,4 @@ composer.phar
 /core/cache/
 
 composer.lock
+/log/

@@ -13,6 +13,7 @@ class Boot {
         return  $ctx->get("response");
     }
     static function Init(){
+        Log::Init();
         Config::Init();
         Route::Init();
     }
