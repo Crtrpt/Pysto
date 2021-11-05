@@ -44,8 +44,12 @@ class Route {
         $instance=new $namespace();
 
         $action=$seg[3];
+        $bzStart=microtime(true);
+        $response=$instance->$action();
+        $bzEnd=microtime(true);
 
-        $ctx->set("response", $instance->$action());
+        $ctx->set("responseTime", $bzEnd-$bzStart);
+        $ctx->set("response",  $response);
        
     }
 }

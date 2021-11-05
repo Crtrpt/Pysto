@@ -27,7 +27,7 @@ class Log  implements Component{
         fwrite(Log::$logFile, Log::getLogStr().Log::serialization($log)."\r\n");
     }
     static function getLogStr(){
-
+        //收集 环境日志
         return  "[".Log::$ctx->get("ip")."] "
                 ."[".Log::$ctx->get("server")["SERVER_NAME"]."] "
                 ."[".date("y-m-d h:i:s",time())."] "
