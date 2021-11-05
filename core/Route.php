@@ -40,7 +40,7 @@ class Route {
         }
 
         $namespace="\App\\".ucwords($seg[1])."\\".ucwords($seg[2])."Controller";
-       
+        $ctx->set("namespace",$namespace);
         $instance=new $namespace();
 
         $action=$seg[3];

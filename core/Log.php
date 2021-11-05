@@ -27,7 +27,14 @@ class Log  implements Component{
         fwrite(Log::$logFile, Log::getLogStr().Log::serialization($log)."\r\n");
     }
     static function getLogStr(){
-        return  "[".Log::$ctx->get("ip")."] "."[".date("y-m-d h:i:s",time())."] ";
+
+        return  "[".Log::$ctx->get("ip")."] "
+                ."[".Log::$ctx->get("server")["SERVER_NAME"]."] "
+                ."[".date("y-m-d h:i:s",time())."] "
+                ."[".Log::$ctx->get("tid")."] "
+                ."[".Log::$ctx->get("REQUEST_URI")."] "
+                ."[".Log::$ctx->get("namespace")."] "
+                ;
     }
     static function serialization($data){
         if(is_string($data)){
