@@ -36,7 +36,4 @@ class Log  implements Component{
             return  json_encode($data);
         }
     }
-    function log(){
-        
-    }
 }
