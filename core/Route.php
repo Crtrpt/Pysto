@@ -33,16 +33,13 @@ class Route {
                 $seg[3]="index";
             }
         }
-        
+
         $namespace="\App\\".ucwords($seg[1])."\\".ucwords($seg[2])."Controller";
        
         $instance=new $namespace();
 
         $action=$seg[3];
 
-
-
-       
         $ctx->set("response", $instance->$action());
     }
 }
