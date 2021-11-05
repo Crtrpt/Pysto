@@ -3,6 +3,7 @@
 namespace Core;
 
 interface Component {
-    function Init($ctx);
-    function ShutDown($ctx);
+    static function Init($ctx);
+    static function ShutDown($ctx);
+    function Log();
 }

@@ -1,7 +1,8 @@
 <?php
 namespace Core;
 use Core\Ctx;
-class Log {
+use Core\Component;
+class Log  implements Component{
     static $logFile;
     static $ctx;
     static function Init($ctx){
@@ -34,5 +35,8 @@ class Log {
         }else{
             return  json_encode($data);
         }
+    }
+    function log(){
+        
     }
 }
