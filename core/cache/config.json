@@ -1,1 +1,1 @@
-{"app.name":"evo","app.slat":"1sfb80gh3l7skbhjbqp7","app.log_path":"..\/log\/access.log","config.aaa":"bbb","db.host":"111"}
+{"app.name":"evo","app.slat":"1sfb80gh3l7skbhjbqp7","app.log_path":"..\/log\/access.log","config.aaa":"bbb","db.dsn":"mysql:dbname=test;host=127.0.0.1;port=3307","db.root":"root","db.password":""}

@@ -9,9 +9,9 @@ class Ctx {
     }
 
     function __construct(){
-        $this->context["ip"]=Ctx::tid();
+        $this->context["ip"]=$_SERVER["REMOTE_ADDR"] ;
         $this->context["server"]=$_SERVER;
-        $this->context["tid"]=$_SERVER["REMOTE_ADDR"];
+        $this->context["tid"]=Ctx::tid();
         $this->context["REQUEST_URI"]=$_SERVER["REQUEST_URI"];
     }
 

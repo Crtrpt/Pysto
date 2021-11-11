@@ -10,9 +10,8 @@ class Route {
 
     }
     static function Boot(String $requestPath,$ctx){
-        
         //路由解析
-        $seg=explode("/",$requestPath);
+        $seg=explode("/",  explode("?",$requestPath)[0]);
         if(!isset($seg[1] )){
             array_push($seg,"index");
         }else{
@@ -45,7 +44,8 @@ class Route {
 
         $action=$seg[3];
         $bzStart=microtime(true);
-        $response=$instance->$action();
+        
+        $response=$instance->$action($ctx,$_REQUEST);
         $bzEnd=microtime(true);
 
         $ctx->set("responseTime", $bzEnd-$bzStart);

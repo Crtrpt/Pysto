@@ -9,6 +9,7 @@ class Boot {
         $ctx=new Ctx();
         Boot::Init( $ctx);
         //路由到相应的文件
+        
         Route::Boot($_SERVER["REQUEST_URI"],$ctx);
         
         Boot::ShutDown($ctx);
