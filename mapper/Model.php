@@ -8,7 +8,7 @@ class Model extends Base{
    /**
     * 产品id
     */
-   var $productId;
+   var $product_id;
    /**
     * 产品快照
     */

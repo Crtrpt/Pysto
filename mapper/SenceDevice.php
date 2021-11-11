@@ -5,9 +5,9 @@ class SenceDevice extends Base{
    /**
     * 场景id
     */
-   var $senceId;
+   var $sence_id;
    /**
     * 设备id
     */
-   var $deviceId;
+   var $device_id;
 }

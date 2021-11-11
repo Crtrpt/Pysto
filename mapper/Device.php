@@ -10,21 +10,17 @@ class Device extends Base {
    /**
     * 产品型号
     */
-   var $modelId;
+   var $model_id;
    /**
     * 产品类型
     */
-   var $productId;
+   var $product_id;
    /**
     * 接入网关
     */
-   var $gatewayId;
+   var $gateway_id;
     /**
      * 设备位置
      */
     var $location;
-    /**
-     * 经纬度
-     */
-    var $lat_long;
 }

@@ -45,7 +45,7 @@ class Route {
         $action=$seg[3];
         $bzStart=microtime(true);
         
-        $response=$instance->$action($ctx,$_REQUEST);
+        $response=$instance->$action($ctx,(object)$_REQUEST);
         $bzEnd=microtime(true);
 
         $ctx->set("responseTime", $bzEnd-$bzStart);
