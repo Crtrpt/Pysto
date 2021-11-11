@@ -11,7 +11,8 @@
             "App\\": "app/",
             "Core\\": "core/",
             "Plugin\\":"plugin/",
-            "Service\\":"Service/"
+            "Service\\":"service/",
+            "Mapper\\":"mapper/"
         }
     },
     "require": {}
