@@ -1,7 +1,7 @@
 export default function Footer({ children }) {
     return (
-      <>
-        footer
-      </>
+      <div className=" text-center mb-5">
+        copyright@xxx.com
+      </div>
     )
   }

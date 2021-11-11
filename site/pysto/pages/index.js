@@ -12,13 +12,11 @@ export default function Home() {
 
       <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
         <h1 className="text-6xl font-bold">
-            Welcome to  Pysto
+            Pysto  硬件增强平台
         </h1>
       </main>
 
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        
-      </footer>
+
     </div>
   )
 }
