@@ -5,13 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.pysto</groupId>
-    <artifactId>start</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>parent</artifactId>
     <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>runtime</module>
         <module>core</module>
-        <module>test_plugin</module>
+        <module>plugin</module>
     </modules>
 
     <properties>
@@ -23,7 +22,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.20</version>
+            <version>1.18.10</version>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
