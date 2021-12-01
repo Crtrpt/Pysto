@@ -14,8 +14,6 @@ require __DIR__ . '/../vendor/autoload.php';
 //开始执行  
 $res= \Core\Boot::Run();
 
-
-
 if(is_string($res)){
     echo $res;
 }else{

@@ -50,6 +50,5 @@ class Route {
 
         $ctx->set("responseTime", $bzEnd-$bzStart);
         $ctx->set("response",  $response);
-       
     }
 }

@@ -9,8 +9,12 @@ use Core\Log;
 
 class TestController extends  BaseController {
     
-    static public function  index(){
-        return self::success("test api");
+    public function  index(){
+        return self::success("test api11");
+    }
+
+    public function  indee11(){
+        return self::success("test api222");
     }
 
     static public function  event(){
@@ -22,7 +26,7 @@ class TestController extends  BaseController {
 
         return self::success("test api");
     }
-    static public function  log(){
+    public function  log(){
         Log::info("11");
         return self::success("test api");
     }
